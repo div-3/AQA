@@ -1,4 +1,5 @@
 package AQA.JSONAndXML;
+//https://habr.com/ru/companies/otus/articles/687004/
 
 /*1. Сервис игроков (JSON)
 Создайте класс Player. Скопируйте ссылка
