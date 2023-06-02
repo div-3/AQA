@@ -23,13 +23,14 @@ public class TestClass {
                     new Player(i, ("Player" + (i + 1)), new Random().nextInt(1, 10), (i % 2 == 0)));
         }
 
-        //Изначальная сколлекция игроков
+        //Начальная коллекция игроков
         System.out.println("---------------------------------------------------------------");
-        System.out.println("Изначальная сколлекция игроков");
+        System.out.println("Начальная коллекция игроков");
         for (Player p : service.getPlayers()) {
             System.out.println(p.toString());
         }
 
+        //Добавление очков игрокам
         service.addPoints(1, 10);
         service.addPoints(2, 10);
         service.addPoints(5, 10);
@@ -43,6 +44,7 @@ public class TestClass {
             System.out.println(p.toString());
         }
 
+        //Удаление игроков по id
         service.deletePlayer(0);
         service.deletePlayer(2);
         service.deletePlayer(4);
@@ -56,6 +58,5 @@ public class TestClass {
         for (Player p : service.getPlayers()) {
             System.out.println(p.toString());
         }
-
     }
 }

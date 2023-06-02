@@ -1,5 +1,7 @@
 package AQA.JSONAndXML;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+
 import java.util.Objects;
 
 public class Player {
@@ -8,6 +10,9 @@ public class Player {
     private String nick;
     private int points;
     private boolean isOnline;
+
+    public Player() {
+    }
 
     public Player(int id, String nick, int points, boolean isOnline) {
         this.id = id;
