@@ -5,8 +5,10 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class PlayerServiceJSON implements PlayerService {
@@ -24,20 +26,22 @@ public class PlayerServiceJSON implements PlayerService {
         this.players = players;
     }
 
-    public void restoreData() {
+    public Collection<Player> getSavedData() {
         if (Files.exists(this.path)) {
             try {
                 ObjectMapper objectMapper = new ObjectMapper();
-                players = objectMapper.readValue(path.toFile(), PlayerServiceJSON.class).players;
+//                players = objectMapper.readValue(path.toFile(), PlayerServiceJSON.class).players;     //Чтение объекта интерфейса PlayerServiceJSON
+                return objectMapper.readValue(path.toFile(), new TypeReference<>(){});   //Чтение МАССИВА игроков
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
         }
+        return null;
     }
 
     public boolean saveData() {
         try {
-            String json = objectMapper.writeValueAsString(this);
+            String json = objectMapper.writeValueAsString(this.players);
             Files.deleteIfExists(path);
             Files.writeString(path, json);
         } catch (IOException e) {
@@ -73,6 +77,14 @@ public class PlayerServiceJSON implements PlayerService {
         if (p == null) return null;
         players.remove(p);
         saveData();
+
+        //Проверка считывания данных из JSON
+        System.out.println("---------------------------------------");
+        System.out.println("Сохранённые данные:");
+        for (Player p1 : getSavedData()) {
+            System.out.println(p1.toString());
+        }
+
         return p;
     }
 
