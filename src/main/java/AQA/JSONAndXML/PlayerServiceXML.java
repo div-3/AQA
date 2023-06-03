@@ -5,20 +5,20 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Collection;
+
 import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 
-public class PlayerServiceJSON implements PlayerService {
+public class PlayerServiceXML implements PlayerService {
     private Collection<Player> players = new ArrayList<>();
-    private Path path = Path.of("./players.json");
-    ObjectMapper objectMapper = new ObjectMapper();
-
+    private Path path = Path.of("./players.xml");
+    XmlMapper mapper = new XmlMapper();
 
     @Override
     public Collection<Player> getSavedData() {
         if (!Files.exists(this.path)) return null;
         try {
-            return objectMapper.readValue(path.toFile(), new TypeReference<>(){});   //Чтение МАССИВА игроков
+            return mapper.readValue(path.toFile(), new TypeReference<>(){});   //Чтение МАССИВА игроков
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -26,10 +26,11 @@ public class PlayerServiceJSON implements PlayerService {
 
     public boolean saveData() {
         try {
-            String json = objectMapper.writeValueAsString(this.players);
+            String xmlString = mapper.writeValueAsString(this.players);
             Files.deleteIfExists(path);
-            Files.writeString(path, json);
-            System.out.println("Данные сохранены в JSON");
+            Files.writeString(path, xmlString);
+            System.out.println("Данные сохранены в XML");
+            return true;
         } catch (IOException e) {
             System.out.println("Проблема с сохранением файла: " + e.toString());
         }

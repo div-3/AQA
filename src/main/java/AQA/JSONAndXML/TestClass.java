@@ -10,52 +10,103 @@ package AQA.JSONAndXML;
 Создайте класс TestClass. В нем метод psvm
 В методе создайте экземпляр класс
 PlayerService service = new PlayerServiceJSON();
-Протестируйте методы сервиса. Убедитесь, что все изменения сохраняются (или удаляются) в файле*/
+Протестируйте методы сервиса. Убедитесь, что все изменения сохраняются (или удаляются) в файле
+
+2. СО ЗВЕЗДОЧКОЙ. Сервис игроков (XML)
+Все то же самое, только создайте класс PlayerServiceXML.
+"Черный ящик" (логика) вся та же
+PlayerService service = new PlayerServiceXML();*/
 
 import java.util.Random;
 
 public class TestClass {
     public static void main(String[] args) {
-        PlayerService service = new PlayerServiceJSON();
+        PlayerService serviceJson = new PlayerServiceJSON();
+        PlayerService serviceXml = new PlayerServiceXML();
 
-        for (int i = 0; i < 10; i++) {
-            service.createPlayer(
+        System.out.println("Создание коллекции:");
+        for (int i = 0; i < 5; i++) {
+            serviceJson.createPlayer(
+                    new Player(i, ("Player" + (i + 1)), new Random().nextInt(1, 10), (i % 2 == 0)));
+            serviceXml.createPlayer(
                     new Player(i, ("Player" + (i + 1)), new Random().nextInt(1, 10), (i % 2 == 0)));
         }
 
         //Начальная коллекция игроков
         System.out.println("---------------------------------------------------------------");
-        System.out.println("Начальная коллекция игроков");
-        for (Player p : service.getPlayers()) {
+        System.out.println("Начальная коллекция игроков (JSON):");
+        for (Player p : serviceJson.getPlayers()) {
+            System.out.println(p.toString());
+        }
+        System.out.println("---------------------------------------------------------------");
+        System.out.println("Начальная коллекция игроков (XML):");
+        for (Player p : serviceXml.getPlayers()) {
             System.out.println(p.toString());
         }
 
-        //Добавление очков игрокам
-        service.addPoints(1, 10);
-        service.addPoints(2, 10);
-        service.addPoints(5, 10);
-        service.addPoints(7, 10);
-        service.addPoints(9, 10);
+        //Добавление очков игрокам JSON
+        System.out.println("Добавление очков игрокам JSON");
+        serviceJson.addPoints(1, 10);
+        serviceJson.addPoints(2, 10);
+        serviceJson.addPoints(5, 10);
 
-        //Коллекция игроков после изменения очков
+        //Добавление очков игрокам XML
+        System.out.println("Добавление очков игрокам XML");
+        serviceXml.addPoints(1, 10);
+        serviceXml.addPoints(2, 10);
+        serviceXml.addPoints(5, 10);
+
+        //Коллекция игроков после изменения очков (JSON)
         System.out.println("---------------------------------------------------------------");
-        System.out.println("Коллекция игроков после изменения очков");
-        for (Player p : service.getPlayers()) {
+        System.out.println("Коллекция игроков после изменения очков (JSON)");
+        for (Player p : serviceJson.getPlayers()) {
             System.out.println(p.toString());
         }
 
-        //Удаление игроков по id
-        service.deletePlayer(0);
-        service.deletePlayer(2);
-        service.deletePlayer(4);
-        service.deletePlayer(6);
-        service.deletePlayer(8);
-        service.deletePlayer(10);
-
-        //Коллекция игроков после удаления
+        //Коллекция игроков после изменения очков (XML)
         System.out.println("---------------------------------------------------------------");
-        System.out.println("Коллекция игроков после удаления");
-        for (Player p : service.getPlayers()) {
+        System.out.println("Коллекция игроков после изменения очков (XML)");
+        for (Player p : serviceXml.getPlayers()) {
+            System.out.println(p.toString());
+        }
+
+        //Удаление игроков по id (JSON)
+        System.out.println("Удаление игроков по id (JSON)");
+        serviceJson.deletePlayer(0);
+        serviceJson.deletePlayer(2);
+        serviceJson.deletePlayer(4);
+
+        //Удаление игроков по id (XML)
+        System.out.println("Удаление игроков по id (XML)");
+        serviceXml.deletePlayer(0);
+        serviceXml.deletePlayer(2);
+        serviceXml.deletePlayer(4);
+
+        //Коллекция игроков после удаления (JSON)
+        System.out.println("---------------------------------------------------------------");
+        System.out.println("Коллекция игроков после удаления (JSON)");
+        for (Player p : serviceJson.getPlayers()) {
+            System.out.println(p.toString());
+        }
+
+        //Коллекция игроков после удаления(XML)
+        System.out.println("---------------------------------------------------------------");
+        System.out.println("Коллекция игроков после удаления (XML)");
+        for (Player p : serviceXml.getPlayers()) {
+            System.out.println(p.toString());
+        }
+
+        //Коллекция игроков из файла (JSON)
+        System.out.println("---------------------------------------------------------------");
+        System.out.println("Коллекция игроков из файла (JSON)");
+        for (Player p : serviceJson.getSavedData()) {
+            System.out.println(p.toString());
+        }
+
+        //Коллекция игроков из файла (XML)
+        System.out.println("---------------------------------------------------------------");
+        System.out.println("Коллекция игроков из файла (XML)");
+        for (Player p : serviceXml.getSavedData()) {
             System.out.println(p.toString());
         }
     }

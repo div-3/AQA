@@ -9,6 +9,9 @@ public interface PlayerService {
     // получить список игроков
     Collection<Player> getPlayers();
 
+    //вернуть сохранённые данные из файла
+    Collection<Player> getSavedData();
+
     // создать игрока (возвращает id нового игрока)
     int createPlayer(Player player);
 
@@ -17,5 +20,4 @@ public interface PlayerService {
 
     // добавить очков игроку. Возвращает обновленный счет
     int addPoints(int playerId, int points);
-
 }

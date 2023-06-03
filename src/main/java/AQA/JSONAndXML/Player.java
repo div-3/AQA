@@ -1,7 +1,5 @@
 package AQA.JSONAndXML;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-
 import java.util.Objects;
 
 public class Player {
