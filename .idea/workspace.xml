@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa4c5dbf-edef-4257-948c-d011eb5ea5c1" name="Changes" comment="Доработал выгрузку и загрузку объета в JSON. Теперь грузится список игроков.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/AQA/JSONAndXML/PlayerServiceXML.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/players.json" beforeDir="false" afterPath="$PROJECT_DIR$/players.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AQA/JSONAndXML/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AQA/JSONAndXML/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AQA/JSONAndXML/PlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AQA/JSONAndXML/PlayerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AQA/JSONAndXML/PlayerServiceJSON.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AQA/JSONAndXML/PlayerServiceJSON.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AQA/JSONAndXML/TestClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AQA/JSONAndXML/TestClass.java" afterDir="false" />
+    <list default="true" id="fa4c5dbf-edef-4257-948c-d011eb5ea5c1" name="Changes" comment="1. Сделал запись/чтение XML.&#10;2. Почистил все классы.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +21,19 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="12f454d2-f9d9-4c28-8e2d-1310f550a56a" />
+        <option name="url" value="https://github.com/div-3/AQA.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -89,12 +96,31 @@
       <option name="project" value="LOCAL" />
       <updated>1685758507582</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="1. Сделал запись/чтение XML.&#10;2. Почистил все классы.">
+      <created>1685802231115</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1685802231115</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Часть 1 ДЗ. Сохранение в JSON." />
     <MESSAGE value="Доработал выгрузку и загрузку объета в JSON. Теперь грузится список игроков." />
-    <option name="LAST_COMMIT_MESSAGE" value="Доработал выгрузку и загрузку объета в JSON. Теперь грузится список игроков." />
+    <MESSAGE value="1. Сделал запись/чтение XML.&#10;2. Почистил все классы." />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Сделал запись/чтение XML.&#10;2. Почистил все классы." />
   </component>
 </project>
