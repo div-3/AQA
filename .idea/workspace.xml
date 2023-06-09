@@ -5,6 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fa4c5dbf-edef-4257-948c-d011eb5ea5c1" name="Changes" comment="1. Сделал запись/чтение XML.&#10;2. Почистил все классы.">
+      <change afterPath="$PROJECT_DIR$/src/Presentations/0. AQA. кто это и чем занимается.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Presentations/1. Введениев языки программирования. Базовые типы данных.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Presentations/10. JUnit. Расширяем тестовый фреймворк.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Presentations/2. Сложные типы данных. Введение в ООП.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Presentations/3. Массивы. Циклы.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Presentations/4. Ветвления. Методы классов.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Presentations/5. Интерфейсы.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Presentations/6. Интерфейсы - 2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Presentations/7. Исключения. Работа с датой.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Presentations/8. Работас XML и JSON.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Presentations/9. Пишем автотесты.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,13 +31,18 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -43,6 +59,9 @@
     </option>
   </component>
   <component name="ProjectId" id="2QdyJlZp5mkkkBWp4yv5HfA4BVz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -111,7 +130,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="JUnitTestAnnotation" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
